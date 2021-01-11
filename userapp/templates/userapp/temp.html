@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Some Title</title>
+</head>
+<body>
+<div>
+{% for app in all_apps %}
+    {{ app.app_id }}
+    {% endfor %}
+</div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<link rel="stylesheet" href="{% static 'css/home_css.css' %}">
+<div class="colorstrip">
+	<div>
+		<img src="{% static 'images/embassyLogo.png' %}" class="logo_img">
+
+	</div>
+	<div class="name">
+		<p>U.S. Embassy & Consulates<br>India</p>
+	</div>
+</div>
+
+<div class="colorstrip2">
+	
+		<p class="strip2para"><b>Air Quality Data:</b> U.S. Embassy and Consulates’ air quality monitors measure PM 2.5 data.</p>
+	
+</div>
+
+<div class="redstrip">
+
+  <div class="topNav">
+    <a href="./home.html">Home</a>
+  <a href="{% url 'visaForm' %}">Visas</a>
+  <a href="./citizen_services_page.html">U.S. Citizen Services</a>
+  <a href="./statuspage.html">View Status</a>
+  <a href="#./heathcare.html">Our Relationship</a>
+	  <a href="#./heathcare.html">Education & Culture</a>
+  <a href="login.html">Employee login</a>
+
+</div>
+
+<div class="title_img_container">
+	<img src="{% static 'images/pic1.jpg' %}" class="pic1">
+	<div class="title_img_text"><b>Secretary of Defense Mark T. Esper meets with Minister Rajnath Singh</b></div>
+</div>
+<center>
+<div class="img_div">
+	<div class = "innerImg">
+		<a href = "miliImg1.html"><img src="https://in.usembassy.gov/wp-content/themes/cms3/assets/images/default-blog-seal.png" class = "innerImg zoom"></a>
+		<div class="inner_img_text">U.S. Mission India NowCast Air Quality Index The U.S. Embassy and Consulates’ air quality monitors measure airborne fine particulate matter (commonly referred to as PM…</div> 
+	</div>
+
+	<div class = "innerImg">
+		<img src="https://in.usembassy.gov/wp-content/themes/cms3/assets/images/default-blog-seal.png" class = "innerImg zoom" >
+		<div class="inner_img_text">Weather Alert—U.S. Consulate General Chennai Tropical Cyclone Development November 23, 2020 Location:   Puducherry, Tamil Nadu Event:   A tropical depression in the Bay of Bengal is expected to strengthen into a tropical cyclone…</div> 
+	</div>
+
+	<div class = "innerImg">
+		<img src="https://in.usembassy.gov/wp-content/themes/cms3/assets/images/default-blog-seal.png" class = "innerImg zoom">
+		<div class="inner_img_text">The U.S. Government, through the U.S. Agency for International Development (USAID), is donating 15 new, state-of-the-art ventilators to the Royal Government of Bhutan to assist…</div> 
+	</div>
+
+</div>
+</center>
+<br><br><br><br><br><br>
+
+</body>
+</html>

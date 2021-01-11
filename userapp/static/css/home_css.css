@@ -1,0 +1,216 @@
+.colorstrip{
+    margin-left:-8px;
+    margin-top:-20px;
+    width: 101%;
+    height: 152px;
+    border-color: #003a79;
+    background-color: #003a79;
+}
+
+.logo_img{
+  position: relative;
+  height: 86px;
+  width: 86px;
+  margin-left: 100px;
+  margin-top: 33px;
+  float: left;
+}
+.name{
+  position: relative;
+  margin-left: 20px;
+  margin-top: 28px;
+  float: left;
+  color: white;
+  font-size: 20px;
+}
+.colorstrip2{
+    margin-top:-16px;
+    margin-left:-9px;
+    width: 101%;
+    height: 36px;
+    background-color: #cccccc;
+}
+.strip2para{
+  padding-top: 7px;
+  margin-left: 300px;
+}
+.redstrip{
+    margin-left:-8px;
+    width: 101%;
+    height: 5px;
+    background-color: #cc3333;
+
+}
+.topNav{
+  padding-top: 19px;
+  margin-bottom: 10px;
+  margin-left: 120px;
+  
+}
+.topNav a {
+  color:black;
+	  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 19px;
+}
+.topNav a:hover {
+  background-color: #ededed;
+  color: #cc3333;
+transition: 1s;
+}
+.topNav a.active {
+  background-color: #ededed;
+  color: #cc3333;
+}
+.dropbtn {
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  margin-top: 5px;
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {transition: 1s;}
+
+.dropdown:hover .dropdown-content {display: block; transition: 1s;}
+
+.dropdown:hover .dropbtn {transition: 1s;}
+
+
+.nav_content_div{
+  height: 300px;
+  width: 850px;
+  background-color: #ededed;
+}
+
+.non_immigrant_visa{
+  width: 32%;
+  float: left;
+  padding-left: 1%;
+}
+.immigrant_visa{
+  width: 32%;
+  float: left;
+  border-left: 1px solid #cc3333;
+  padding-left: 1%;
+}
+.tourist_visa{
+  width: 32%;
+  float: left;
+  border-left: 1px solid black;
+  padding-left: 1%;  
+}
+.visa_red_strip{
+    width: 86	0px;
+    height: 3px;
+    background-color: #cc3333;
+
+}
+.h1b_form_button{
+  margin-top:130px;
+  width: 150px;
+  margin-left: 50px;
+  border-color: #003a79;
+  background-color: #003a79;
+  border-style: solid;
+  color:white;
+}
+
+.h1b_form_button:hover{background-color:#002b59;}
+
+
+.title_img_container {
+  position: relative;
+  text-align: center;
+  color: white;
+  margin-bottom:20px;
+}
+
+.pic1{
+  margin-top:20px;
+}
+
+.title_img_text{
+  position: absolute;
+  bottom: 15px;
+  font-size: 26px;
+  text-align: center;
+  margin-left: 180px;
+}
+
+.imgDiv{
+  margin-left:250px;
+  margin-bottom:20px;
+}
+.innerImg {
+  height: 250px;
+  width: 349px;
+  float: left;
+  margin-left: 35px;
+  padding: 20px;
+}
+.inner_img_text{
+margin-left:100px;
+margin-right:-50px;
+text-decoration:none;
+}
+
+.visa_page_buttons{
+  margin-top: 100px;
+  margin-left:500px;
+}
+
+.visa_page_h1b_button{
+  float:left;
+  margin-left:20px;
+  width:200px;
+  height:30px;
+  border-color: #003a79;
+  background-color: #003a79;
+  color: white;
+  border-style: solid;
+  
+}
+
+.reg_id{
+  background-color: lightgrey;
+  border: 1px solid black;
+  padding: 8px;
+  margin-top: -5px;
+  margin-left: 40px;
+  width: 80px;
+}
+.fill_the_form{
+  width:200px;
+  height:30px;
+  border-color: #003a79;
+  background-color: #003a79;
+  color: white;
+  border-style: solid;
+  
+}
+.please_select_one{
+margin-left:170px;
+}
