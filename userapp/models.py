@@ -79,7 +79,7 @@ class Functionality(models.Model):
 class H1BVisaApplication(models.Model):
     appl_no = models.AutoField(primary_key=True)
     ben_name = models.CharField(max_length=30, blank=True, null=True)
-    ben_dob = models.DateField(blank=True, null=True)
+    ben_dob =  models.DateTimeField(blank=True, null=True)
     ben_gender = models.CharField(max_length=2, blank=True, null=True)
     ben_addr = models.CharField(max_length=50, blank=True, null=True)
     nationality = models.CharField(max_length=20, blank=True, null=True)

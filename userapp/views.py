@@ -63,7 +63,7 @@ def h1bSubmit(request):
         job_title = request.POST.get('job_title')
         salary = request.POST.get('salary')
         full_time_position = request.POST.get('fulltime')
-        occupation = "Sales"
+        occupation = "COMPUTER PROGRAMMERS"
 
         print(str(job_title) + " " + str(salary) + " " + str(ben_name))
         status = getPredictions(employer_name, location, job_title, full_time_position, occupation, salary)
@@ -94,15 +94,37 @@ def getPredictions(employer_name, worksite, job_title, full_time_position, soc_n
     import pickle
     model = pickle.load(open("h1b_visa_status.sav", "rb"))
 
-    top_employers = ['Infosys', 'IBM', 'TCS', 'Wipro', 'Deloitte']
-
     cols = ['FULL_TIME_POSITION', 'PREVAILING_WAGE', 'YEAR', 'EMP_DELOITTE',
        'EMP_IBM', 'EMP_INFOSYS', 'EMP_OTHER', 'EMP_TCS', 'EMP_WIPRO', 'SOC_CO',
        'SOC_CP', 'SOC_CSA', 'SOC_OTHER', 'SOC_SDA', 'SOC_SDSS', 'JOB_CP',
        'JOB_OTHER', 'JOB_PA', 'JOB_SD', 'JOB_SE', 'JOB_SA', 'ATLANTA',
        'CHICAGO', 'HOUSTON', 'NY', 'OTHER', 'SAN_FRANSISCO']
 
-    X = [[1, salary, 2015, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0]]
+    top_employers = ['DELOITTE', 'IBM', 'INFOSYS', 'TCS', 'WIPRO']
+    top_soc = ['COMPUTER SYSTEMS ANALYSTS', 'SOFTWARE DEVELOPERS, APPLICATIONS','COMPUTER PROGRAMMERS',
+                'COMPUTER OCCUPATIONS, ALL OTHER',
+                'SOFTWARE DEVELOPERS, SYSTEMS SOFTWARE']
+    top_worksite = ['NEW YORK, NEW YORK', 'HOUSTON, TEXAS', 'SAN FRANCISCO, CALIFORNIA', 'CHICAGO, ILLINOIS',
+                    'ATLANTA, GEORGIA']
+    top_jobtitle = ['OTHER', 'PROGRAMMER ANALYST', 'SOFTWARE ENGINEER', 'COMPUTER PROGRAMMER', 'SYSTEMS ANALYST']
+
+    emp = get_vector(employer_name , top_employers)
+    soc = get_vector(soc_name , top_soc)
+    job = get_vector(job_title , top_jobtitle)
+    workloc = get_vector(worksite , top_worksite)
+
+    print(emp)
+    print(soc)
+    print(job)
+    print(workloc)
+
+    ftp = 0
+    if full_time_position == 'Y':
+        ftp = 1
+
+
+    X = [[ftp, salary, 2015] + emp + soc + job + workloc]
+
     prediction = model.predict(X)
     print(prediction)
     if prediction == 0:
@@ -113,3 +135,19 @@ def getPredictions(employer_name, worksite, job_title, full_time_position, soc_n
         return "error"
 
 
+def get_vector(name, top_val):
+    i = 0
+    L = [0, 0, 0, 0, 0]
+    for val in top_val:
+        if name.upper().find(val) != -1:
+            L[i] += 1
+            break
+        i += 1
+
+    if L.count(1) == 0:
+        L.insert(3, 1)
+    else:
+        L.insert(3, 0)
+
+
+    return L
